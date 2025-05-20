@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/app/components/text_components.dart';
+import 'package:ecommerceapp/app/modules/checkout/controller/controller_checkout.dart';
 import 'package:flutter/material.dart';
 
 class Checkout extends StatefulWidget {
@@ -21,6 +22,14 @@ class _CheckoutState extends State<Checkout> {
           family: 'Bold',
         ),
         centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: [
+            ProgressBar(stepActuel: 1),
+          ],
+        ),
       ),
     );
   }
