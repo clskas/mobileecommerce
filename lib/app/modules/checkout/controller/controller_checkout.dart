@@ -11,7 +11,7 @@ class ProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Row(mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(4, (index) {
         return Row(
           children: [
@@ -23,7 +23,7 @@ class ProgressBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
-            if(index<4)
+            if(index<3)
             Container(
               height: 2,
               width: 50,
