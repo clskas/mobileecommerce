@@ -1,4 +1,9 @@
+import 'package:ecommerceapp/app/components/button_components.dart';
+import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
+import 'package:ecommerceapp/app/modules/checkout/controller/controller_checkout.dart';
+import 'package:ecommerceapp/app/modules/checkout/view/checkout3.dart';
+import 'package:ecommerceapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutState extends StatefulWidget {
@@ -9,10 +14,17 @@ class CheckoutState extends StatefulWidget {
 }
 
 class _CheckoutStateState extends State<CheckoutState> {
-  String? selectedCity;
-  String? selectedDistrict;
-  final List<String> cities = ['City 1','City 2','City 3'];
-  final List<String> districts = ['District 1','District 2','District 3'];
+  String? selectedPaymentMethod;
+
+  final List<String> methodPayment = [
+    'Bank Transfers',
+    'Mobile Banking',
+    'Card',
+    'Payonner',
+    'Amazone Hub Counter',
+    'Apple Pay',
+    'Google Pay',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +34,7 @@ class _CheckoutStateState extends State<CheckoutState> {
         centerTitle: true,
         backgroundColor: Colors.white,
         title: TextComponents(
-          txt: 'Checkout',
+          txt: 'Checkout 2',
           fw: FontWeight.bold,
           family: 'Bold',
         ),
@@ -30,9 +42,66 @@ class _CheckoutStateState extends State<CheckoutState> {
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            //ProgressBar(stepActuel)
+            ProgressBar(stepActuel: 2),
+            h(20),
+            TextComponents(
+              txt: 'Select Payment Methods',
+              fw: FontWeight.bold,
+              family: "Bold",
+              txtSize: 18,
+            ),
+            h(30),
+            // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                border: Border.all(color: Colors.black12),
+              ),
+              height: 400,
+              child: ListView.builder(
+                itemCount: methodPayment.length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      ListTile(
+                        title: TextComponents(txt: methodPayment[index]),
+                        leading: Container(
+                          height: 40,
+                          width: 40,
+                          color: Colors.grey,
+                        ),
+                        trailing: Radio(
+                          value: methodPayment[index],
+                          groupValue: selectedPaymentMethod,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedPaymentMethod = value;
+                            });
+                          },
+                        ),
+                      ),
+                      Container(
+                        height: 1,
+                        width: double.infinity,
+                        color: Colors.black,
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+            h(40),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Checkout3()),
+                );
+              },
+              child: ButtonComponent(txtButton: 'Next', buttonColor: maincolor),
+            ),
           ],
         ),
       ),
