@@ -1,6 +1,7 @@
 // import 'package:ecommerceapp/app/components/button_components.dart';
 // import 'package:ecommerceapp/app/components/text_components.dart';
 //import 'package:ecommerceapp/app/modules/filtre/view/filtre.dart';
+import 'package:ecommerceapp/app/modules/account/view/account.dart';
 import 'package:ecommerceapp/app/modules/checkout/view/checkout.dart';
 import 'package:ecommerceapp/app/modules/checkout/view/checkout2.dart';
 import 'package:ecommerceapp/app/modules/checkout/view/checkout3.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: maincolor)),
       //home: Splash(),
-      home: PaymentStatus(),
+      home: Account(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
+import 'package:ecommerceapp/app/modules/account/view/account.dart';
 import 'package:ecommerceapp/app/modules/filtre/view/filtre.dart';
 import 'package:ecommerceapp/app/modules/notification/view/notification.dart';
 import 'package:ecommerceapp/app/modules/panier/view/panier.dart';
@@ -76,15 +77,13 @@ class _ProductPageState extends State<ProductPage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => NotificationPage(),
-                      ),
+                      MaterialPageRoute(builder: (context) => Account()),
                     );
                   },
                   child: CircleAvatar(
                     backgroundColor: greyCollor,
                     radius: 20,
-                    child: Center(child: Icon(Icons.notifications, size: 30)),
+                    child: Center(child: Icon(Icons.person, size: 30)),
                   ),
                 ),
               ],
