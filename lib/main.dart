@@ -3,6 +3,9 @@
 //import 'package:ecommerceapp/app/modules/filtre/view/filtre.dart';
 import 'package:ecommerceapp/app/modules/checkout/view/checkout.dart';
 import 'package:ecommerceapp/app/modules/checkout/view/checkout2.dart';
+import 'package:ecommerceapp/app/modules/checkout/view/checkout3.dart';
+import 'package:ecommerceapp/app/modules/checkout/view/checkout4.dart';
+import 'package:ecommerceapp/app/modules/checkout/view/payment_status.dart';
 import 'package:ecommerceapp/app/modules/panier/view/panier.dart';
 // import 'package:ecommerceapp/app/modules/productpage/view/product_page.dart';
 // import 'package:ecommerceapp/app/modules/splash/view/splash.dart';
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: maincolor)),
       //home: Splash(),
-    home: CheckoutState(),
+      home: PaymentStatus(),
     );
   }
 }
