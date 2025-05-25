@@ -1,7 +1,6 @@
 import 'package:ecommerceapp/app/components/button_components.dart';
 import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
-import 'package:ecommerceapp/app/modules/home/view/home.dart';
 import 'package:ecommerceapp/app/modules/productpage/view/product_page.dart';
 import 'package:ecommerceapp/utils/colors.dart';
 import 'package:flutter/material.dart';

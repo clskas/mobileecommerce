@@ -2,7 +2,6 @@ import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
 import 'package:ecommerceapp/app/modules/account/view/account.dart';
 import 'package:ecommerceapp/app/modules/filtre/view/filtre.dart';
-import 'package:ecommerceapp/app/modules/notification/view/notification.dart';
 import 'package:ecommerceapp/app/modules/panier/view/panier.dart';
 import 'package:ecommerceapp/app/modules/productpage/controller/controller_product.dart';
 import 'package:ecommerceapp/utils/colors.dart';
@@ -225,7 +224,7 @@ class _ProductPageState extends State<ProductPage> {
                     '13 Reviews',
                     'TK 1500',
                     'TK 1900',
-                    context
+                    context,
                   ),
                 );
               }),
