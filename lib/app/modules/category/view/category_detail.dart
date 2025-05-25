@@ -39,7 +39,7 @@ class _CategoryDetailState extends State<CategoryDetail> {
                 // ignore: sized_box_for_whitespace
                 return Container(
                   width: (MediaQuery.of(context).size.width/2)-20,
-                  child: ProductBox(widget.productName,'13 Reviews','TK 1500','TK 1900'),
+                  child: ProductBox(widget.productName,'13 Reviews','TK 1500','TK 1900',context),
                 );
               }
             ))

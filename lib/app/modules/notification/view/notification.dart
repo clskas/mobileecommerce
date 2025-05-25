@@ -2,6 +2,7 @@ import 'package:ecommerceapp/app/components/button_components.dart';
 import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
 import 'package:ecommerceapp/app/modules/home/view/home.dart';
+import 'package:ecommerceapp/app/modules/productpage/view/product_page.dart';
 import 'package:ecommerceapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -16,10 +17,10 @@ class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        title: TextComponents(txt: "Notification",fw: FontWeight.bold,),
+      appBar: AppBar(
+        title: TextComponents(txt: "Notification", fw: FontWeight.bold),
         centerTitle: true,
-       ),
+      ),
       // ignore: sized_box_for_whitespace
       body: Center(
         // ignore: sized_box_for_whitespace
@@ -48,7 +49,7 @@ class _NotificationPageState extends State<NotificationPage> {
                 onTap: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => ProductPage()),
                   );
                 },
                 child: ButtonComponent(

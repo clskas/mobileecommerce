@@ -1,5 +1,8 @@
 import 'package:ecommerceapp/app/components/space.dart';
 import 'package:ecommerceapp/app/components/text_components.dart';
+import 'package:ecommerceapp/app/modules/Privacy_policy/view/privacy_policy.dart';
+import 'package:ecommerceapp/app/modules/account/view/edit_account.dart';
+import 'package:ecommerceapp/app/modules/notification/view/notification.dart';
 import 'package:ecommerceapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -28,17 +31,31 @@ class _AccountState extends State<Account> {
         padding: EdgeInsets.all(20.0),
         children: [
           h(15),
-          Container(
-            decoration: BoxDecoration(
-              color: greyCollor,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: ListTile(
-              title: TextComponents(txt: 'Edit Profile', txtSize: 18),
-              leading: Icon(Icons.person),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EditAccount()),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: greyCollor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: ListTile(
+                title: TextComponents(txt: 'Edit Profile', txtSize: 18),
+                leading: Icon(Icons.person),
+              ),
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationPage()),
+              );
+            },
             title: TextComponents(txt: 'Notification', txtSize: 18),
             leading: Icon(Icons.notifications),
           ),
@@ -64,6 +81,12 @@ class _AccountState extends State<Account> {
             leading: Icon(Icons.help),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PrivacyPolicy()),
+              );
+            },
             title: TextComponents(txt: 'Privacy Policy', txtSize: 18),
             leading: Icon(Icons.privacy_tip),
           ),

@@ -225,6 +225,7 @@ class _ProductPageState extends State<ProductPage> {
                     '13 Reviews',
                     'TK 1500',
                     'TK 1900',
+                    context
                   ),
                 );
               }),
